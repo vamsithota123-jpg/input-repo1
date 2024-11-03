@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Length Calculator</title>
+</head>
+<body>
+    <h1>Calculate Text Length (Excluding Spaces)</h1>
+
+    <!-- Text input for user -->
+    <input type="text" id="textInput" placeholder="Enter your text here">
+
+    <!-- Button to calculate text length -->
+    <button onclick="calculateLength()">Go</button>
+
+    <!-- Display result here -->
+    <p>Text length (excluding spaces): <span id="lengthResult">0</span></p>
+
+    <script>
+        function calculateLength() {
+            // Get the input text
+            const inputText = document.getElementById("textInput").value;
+
+            // Calculate the length excluding spaces
+            const lengthExcludingSpaces = inputText.replace(/\s+/g, '').length;
+
+            // Update the result display
+            document.getElementById("lengthResult").textContent = lengthExcludingSpaces;
+        }
+    </script>
+</body>
+</html>
